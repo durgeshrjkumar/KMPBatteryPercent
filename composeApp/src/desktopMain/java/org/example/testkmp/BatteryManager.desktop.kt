@@ -12,13 +12,23 @@ actual class BatteryManager {
             println("Name: ${ps.name}")
             println("deviceName: ${ps.deviceName}")
             println("isCharging: ${ps.isCharging}")
-            println("isCharging: ${ps.remainingCapacityPercent}")
+            println("currentCapacity: ${ps.currentCapacity}")
             println("Max Capacity: ${ps.maxCapacity}")
             println("Remaining %: ${ps.remainingCapacityPercent}")
             println("Is Charging: ${ps.isCharging}")
             println("Time Remaining: ${ps.timeRemainingInstant}")
             println("------")
         }
-        return battery?.remainingCapacityPercent?.times(100)?.roundToInt() ?: -1
+       // val battery = SystemInfo().hardware.powerSources.firstOrNull()
+        val powerSource = SystemInfo().hardware.powerSources.firstOrNull() ?: return -1
+
+        val currentCapacity = powerSource.currentCapacity
+        val maxCapacity = powerSource.maxCapacity
+
+        return if (maxCapacity > 0) {
+            (currentCapacity.toDouble() / maxCapacity.toDouble() * 100).roundToInt()
+        } else {
+            -1 // unknown or invalid
+        }
     }
 }
