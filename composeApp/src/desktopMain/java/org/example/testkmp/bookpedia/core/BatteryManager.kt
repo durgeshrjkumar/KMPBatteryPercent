@@ -1,4 +1,4 @@
-package org.example.testkmp
+package org.example.testkmp.bookpedia.core
 
 import oshi.SystemInfo
 import kotlin.math.roundToInt

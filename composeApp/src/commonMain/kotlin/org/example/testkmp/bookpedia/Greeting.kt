@@ -1,4 +1,4 @@
-package org.example.testkmp
+package org.example.testkmp.bookpedia
 
 class Greeting {
     private val platform = getPlatform()

@@ -1,5 +1,6 @@
 package org.example.testkmp
 
+import org.example.testkmp.bookpedia.Platform
 import platform.UIKit.UIDevice
 
 class IOSPlatform: Platform {

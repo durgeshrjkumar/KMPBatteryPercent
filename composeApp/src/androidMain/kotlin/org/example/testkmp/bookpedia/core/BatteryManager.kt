@@ -1,4 +1,4 @@
-package org.example.testkmp
+package org.example.testkmp.bookpedia.core
 
 import android.content.Context
 import android.content.Intent

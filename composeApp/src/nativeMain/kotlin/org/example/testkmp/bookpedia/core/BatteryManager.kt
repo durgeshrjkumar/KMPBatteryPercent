@@ -1,4 +1,4 @@
-package org.example.testkmp
+package org.example.testkmp.bookpedia.core
 
 actual class BatteryManager {
     actual fun getBatteryLevel(): Int {
@@ -6,4 +6,3 @@ actual class BatteryManager {
         return 11
     }
 }
-

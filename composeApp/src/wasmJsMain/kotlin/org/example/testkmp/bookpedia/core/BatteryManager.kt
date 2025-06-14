@@ -1,6 +1,4 @@
-package org.example.testkmp
-
-import kotlin.math.roundToInt
+package org.example.testkmp.bookpedia.core
 
 actual class BatteryManager {
     actual fun getBatteryLevel(): Int {
